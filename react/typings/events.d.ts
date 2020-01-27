@@ -90,6 +90,7 @@ export interface ProductViewData extends EventData {
   event: 'productView'
   eventName: 'vtex:productView'
   product: ProductDetail
+  selectedSku: Item
 }
 
 export interface ProductClickData extends EventData {
@@ -225,6 +226,7 @@ export interface Item {
   referenceId: { Key: string; Value: string }
   seller?: Seller
   sellers: Seller[]
+  image: any
 }
 
 export interface Seller {

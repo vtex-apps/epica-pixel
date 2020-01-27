@@ -1,5 +1,5 @@
 {
-  "name": "YOUR APP NAME",
+  "name": "epica-pixel",
   "vendor": "vtex",
   "version": "0.0.1",
   "title": "CHANGEME",
@@ -24,7 +24,7 @@
     "title": "YOUR APP NAME",
     "type": "object",
     "properties": {
-      "gtmId": {
+      "epicaId": {
         "title": "SAMPLE FIELD",
         "description": "Enter the ID (GTM-XXXX) from your Google Tag Manager",
         "type": "string"

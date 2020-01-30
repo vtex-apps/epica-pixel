@@ -3,6 +3,19 @@ import { ProductOrder, Impression, PixelMessage } from './typings/events'
 
 export function handleEvents(e: PixelMessage) {
   switch (e.data.eventName) {
+    case 'vtex:userData': {
+      const { user } = e.data
+      epica('identify', user.id, {
+        isAuthenticated: user.isAuthenticated,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        document: user.document,
+        id: user.id,
+        email: user.email,
+        phone: user.phone,        
+      })
+      break
+    }    
     case 'vtex:pageView': {
       epica('track', 'Page Viewed', {
         title: e.data.pageTitle,

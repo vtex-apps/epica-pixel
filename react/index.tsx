@@ -129,14 +129,6 @@ export function handleEvents(e: PixelMessage) {
       })
       break
     }
-    case 'vtex:pageInfo': { 
-      // @ts-ignore
-      const { search } = e.data
-      epica('track','Products Searched', {
-        query: search.term
-      });
-      break
-    }
     default: {
       break
     }

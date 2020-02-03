@@ -10,4 +10,4 @@ Run the following command:
 vtex install vtex.epica-pixel@0.x
 ```
 
-Next, open the app settings on your admin and fill the form with <FIELDS>.
+Next, open the app settings on your admin and fill the form with your Epica app ID.

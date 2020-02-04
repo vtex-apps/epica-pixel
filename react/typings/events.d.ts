@@ -10,6 +10,7 @@ export interface PixelMessage extends MessageEvent {
     | HomePageInfo
     | ProductPageInfoData
     | SearchPageInfoData
+    | UserData
 }
 
 export interface EventData {
@@ -90,6 +91,7 @@ export interface ProductViewData extends EventData {
   event: 'productView'
   eventName: 'vtex:productView'
   product: ProductDetail
+  selectedSku: Item
 }
 
 export interface ProductClickData extends EventData {
@@ -105,6 +107,22 @@ export interface ProductImpressionData extends EventData {
   product?: ProductSummary // deprecated, use impressions list!
   position?: number // deprecated, use impressions list!
   list: string
+}
+
+export interface UserData extends EventData {
+  event: 'userData'
+  eventName: 'vtex:userData'
+  user: UserInformation
+}
+
+interface UserInformation {
+  isAuthenticated: string
+  firstName: string
+  lastName: string
+  document: string
+  id: string
+  email: string
+  phone: string
 }
 
 interface CartItem {
@@ -225,6 +243,7 @@ export interface Item {
   referenceId: { Key: string; Value: string }
   seller?: Seller
   sellers: Seller[]
+  image: any
 }
 
 export interface Seller {

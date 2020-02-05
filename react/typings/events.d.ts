@@ -112,11 +112,7 @@ export interface ProductImpressionData extends EventData {
 export interface UserData extends EventData {
   event: 'userData'
   eventName: 'vtex:userData'
-  user: UserInformation
-}
-
-interface UserInformation {
-  isAuthenticated: string
+  isAuthenticated: boolean
   firstName: string
   lastName: string
   document: string

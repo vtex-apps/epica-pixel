@@ -13,6 +13,9 @@ export function handleEvents(e: PixelMessage) {
         email,
         phone,
       } = e.data
+      if (!isAuthenticated) {
+        return
+      }      
       epica('identify', id, {
         isAuthenticated,
         firstName,
